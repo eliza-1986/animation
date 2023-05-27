@@ -1,0 +1,99 @@
+.container {
+    width: 1000px;
+    height: 150px;
+    background-color: black;
+    padding-top: 50px;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    animation-name:circle ;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-direction-count:infinite;
+
+}
+
+.container:hover .circle {
+    animation-play-state: paused;
+    background-color: #fff;
+  
+    
+
+}
+
+@keyframes circle {
+    0% {
+        left: 0;
+    }
+    50% {
+        border-radius: 0;
+    }
+    100% {
+        left: 800px;
+    }
+}
+
+.name {
+    color: white;
+    text-align: center;
+    animation: name 3s ease-in-out;
+}
+
+name_fast {
+    animation-duration: 0.6;
+}
+
+.name_slow {
+    animation-duration: 3s;
+    animation-duration-count:infinite;
+}
+
+@keyframes name {
+   from { 
+    transform: translateX(-400px);
+   }
+   to {
+    transform: translateX(0);
+   }
+}
+
+.foto {
+    width: 1200px;
+    height: 600px;
+}
+
+
+.image {
+    width: 1200px;
+    height: 600px;
+    background-image: url("img/images.jpg");
+    background-repeat: repeat-x;
+    animation-name: image;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: laner;
+    animation-fill-mode: backwards;
+    animation-direction: alternate;
+
+}
+
+
+
+@keyframes image {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 0%;
+    }
+}
+.title {
+    font-size: 48px;
+    text-transform: uppercase;
+}
